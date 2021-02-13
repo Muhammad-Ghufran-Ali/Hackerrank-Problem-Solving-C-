@@ -2,10 +2,6 @@
 
 using namespace std;
 
-string ltrim(const string &);
-string rtrim(const string &);
-vector<string> split(const string &);
-
 // Complete the birthday function below.
 int birthday(vector<int> s, int d, int m) {
 
