@@ -11,8 +11,7 @@ using namespace std;
 
 int pickingNumbers(vector<int> a) {
 
-    int count;
-    vector <int> all;
+    int count, max = 0;
     sort(a.begin(), a.end());
     for(int i = 0; i < a.size(); i++)
     {
@@ -24,10 +23,10 @@ int pickingNumbers(vector<int> a) {
                 count++;
             }
         }
-        all.push_back(count);
+        if(max < count) max = count;
     }
-    sort(all.begin(), all.end());
-    return all[all.size()-1];
+
+    return max;
 }
 
 int main()
@@ -47,3 +46,4 @@ int main()
 
     return 0;
 }
+
